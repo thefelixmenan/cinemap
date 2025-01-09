@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur CineMap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <img src="img/cinemap-logo-horizontal.png" alt="Logo CineMap" id="logo">
+    <form id="cinema-search-form">
+        <button type="button" id="geolocate-button">Me géolocaliser</button>
+        
+        <label for="address-search">Chercher des cinémas proches d'une adresse</label>
+        <input type="search" id="address-search" placeholder="L'adresse recherchée" required>
+        
+        <div class="range-container">
+            <label for="distance-range">Distance en km</label>
+            <input type="range" id="distance-range" min="1" max="50">
+            <span id="distance-value">10 km</span>
+        </div>
+        
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <div class="filter-buttons" style="display: none;">
+        <button id="sort-asc-button">Ordre croissant</button>
+        <button id="sort-desc-button">Ordre décroissant</button>
+        <button id="sort-near-button">Distance la plus proche</button>
+        <button id="sort-far-button">Distance la plus éloignée</button>
+    </div>
+    
+    <div id="error-message" style="color: red;"></div>
+    <ul id="cinema-list"></ul>
+
+    <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/geolocation.js"></script>
+    <script src="js/addressApi.js"></script>
+    <script src="js/cinemaApi.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
