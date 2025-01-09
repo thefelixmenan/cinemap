@@ -42,7 +42,10 @@
      ```
 
 5. **Open the application in your browser**:  
-   If no server setup is required, simply open `index.html` in your preferred web browser.
+   If no server setup is required, you can also run the following command in your terminal:  
+   ```bash
+   .\index.html
+   ```
 
 ## Contributing  
 Contributions are welcome! Feel free to submit a pull request or open an issue to suggest improvements or report bugs.  
