@@ -25,7 +25,6 @@ document.getElementById('distance-range').addEventListener('input', function() {
     document.getElementById('distance-value').textContent = this.value + ' km';
 });
 
-// Function to get geolocation from geolocation.js
 function getGeolocation() {
     // This function is already handled by the event listener in geolocation.js
 }
